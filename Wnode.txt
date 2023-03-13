@@ -1,0 +1,57 @@
+how to handle errors in node js
+
+
+try catch 
+
+ try{
+
+ }catch(err){
+    console.log(err)
+ }
+
+
+//promises
+
+const data =new Promise((reject, resolve)=>{
+
+    if(condtion stisifies){
+        resolve()
+    }else{
+        reject()
+    }
+})
+
+data.then((res)=>{console.log(response of resolve)})
+.catch(err)=>{console.log(err responses)}
+
+
+// callback
+
+somefunction((err, data)=>{
+    if(err){
+        console.log(err)
+    }else{
+        console.log(data)
+    }
+})
+
+
+
+Explain the difference between process.nextTick() and setImmediate() functions.
+
+
+ process is global object in node js and it is used to give information of current proceese and current information
+
+
+
+ process.nextTick():this are used to schedules the exection of  function at  immeditely 
+ after the current function exceution, before the next  iteration of  event loop
+
+
+  this are given with high priority over setimmediates
+  ////(next iterition of event loop)
+
+  setimmediates: this are used to schedules the exection of function
+                  at end of next iteration of event loop  
+
+    //"Life is short, smile while you still have teeth."
