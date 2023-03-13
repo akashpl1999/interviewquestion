@@ -1,0 +1,110 @@
+const person = {
+  name: "John Doe",
+  age: 30,
+}           ///it is json object 
+
+
+
+  "name": "John Doe",
+  "age": 30,         /// while making json,strigyfly(person)
+
+
+
+
+only six falsy values — false, null, undefined, NaN, 0, and '' — and everything else is truthy. 
+This means that [] and {} are both truthy,
+
+
+
+
+var start = 1;
+function setEnd() {
+  var end = 10;
+}
+setEnd();
+console.log(end);//reference err as it not declered in globalscope
+
+
+
+
+const foo = [1, 2, 3];
+const [n] = foo;
+console.log(n); // it prints first elements of array 1
+
+
+
+
+
+//currying:
+
+In other words, a curried function takes its arguments one at a time, returning a new function that takes the next argument 
+until all arguments are provided and the final result is returned.
+
+function makeAdder(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+var addFive = makeAdder(5);
+console.log(addFive(3));
+
+
+
+////closures  technicin which  inner function able to access the varible of outer functions
+
+function createCounter() {
+  var count = 0;
+  
+  return function() {
+    count++;
+    console.log(count);
+  }
+}
+
+var counter = createCounter();
+counter(); // prints 1
+counter(); // prints 2
+counter(); // prints 3
+
+
+
+///
+rainForests.splice(0, 2);  array.splice(index, numberof items to removed from that index(includeing ))
+///
+
+
+code 
+///
+
+let obj={
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const obj2 = {
+  ...obj,
+  a: 0,
+};
+
+console.log(obj2.a, obj2.b);  // 0, 2  since the obj2  have a:0 it remains , 
+
+///
+
+let x =  '6' + 3 + 3;     6 + 3 + "3"
+
+console.log(x); "633"  ///  93
+
+
+
+////
+let cat = { type: "tiger", size: "large" };
+
+let json = JSON.stringify(cat, ["type"])
+
+console.log(json); // print {"type":"tiger"}
+
+
+///
+print(typeof NaN);// its number
+////
